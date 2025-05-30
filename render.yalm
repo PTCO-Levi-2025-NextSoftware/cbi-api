@@ -3,6 +3,6 @@ services:
     name: cbi-api
     env: docker
     plan: free
-    buildCommand: bash start.sh
+    buildCommand: javac -d . src/*.java
     startCommand: java Main
     autoDeploy: true
