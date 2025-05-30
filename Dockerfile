@@ -2,11 +2,11 @@ FROM openjdk:17
 
 WORKDIR /app
 
-COPY ./src ./src
-COPY ./complesso.json ./complesso.json
-COPY ./transazioni.json ./transazioni.json
+# Copia tutto (java + json)
+COPY . .
 
-RUN javac -d . src/*.java
+# Compila tutti i .java nella root
+RUN javac -d . *.java
 
 EXPOSE 8080
 
