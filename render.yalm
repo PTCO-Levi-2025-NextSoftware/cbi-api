@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: cbi-api
-    env: docker
-    plan: free
-    buildCommand: javac -d . src/*.java
-    startCommand: java Main
-    autoDeploy: true
