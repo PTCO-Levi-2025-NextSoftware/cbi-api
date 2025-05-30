@@ -15,7 +15,7 @@ import java.nio.charset.StandardCharsets;
 
 public class CbiHttpServer {
 
-    private static final int SERVER_PORT = 8080;
+    private static final int SERVER_PORT = Integer.parseInt(System.getenv().getOrDefault("PORT", "8080"));
     private static final String API_ENDPOINT_PATH = "/api/findCbiId";
 
     public static void main(String[] args) throws IOException {
